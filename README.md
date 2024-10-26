@@ -1,0 +1,3 @@
+- Register new Magento module: Training_Vendor
+- Create a new entity for “vendor”.
+  - Create a new table (training_vendor, with two fields for vendor_id, name)
