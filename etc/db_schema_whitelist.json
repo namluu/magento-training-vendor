@@ -10,5 +10,15 @@
         "constraint": {
             "PRIMARY": true
         }
+    },
+    "training_vendor_product": {
+        "column": {
+            "vendor_id": true,
+            "product_id": true
+        },
+        "constraint": {
+            "TRAINING_VENDOR_PRODUCT_VENDOR_ID_TRAINING_VENDOR_VENDOR_ID": true,
+            "TRAINING_VENDOR_PRD_PRD_ID_CAT_PRD_ENTT_ENTT_ID": true
+        }
     }
 }

@@ -11,4 +11,15 @@
             <column name="name"/>
         </index>
     </table>
+
+    <table name="training_vendor_product" comment="Vendor To Product Table">
+        <column xsi:type="int" name="vendor_id" unsigned="true" nullable="false" comment="Vendor ID"/>
+        <column xsi:type="int" name="product_id" unsigned="true" nullable="false" comment="Product ID"/>
+        <constraint xsi:type="foreign" referenceId="TRAINING_VENDOR_VENDOR_ID"
+                    table="training_vendor_product" column="vendor_id"
+                    referenceTable="training_vendor" referenceColumn="vendor_id" onDelete="CASCADE"/>
+        <constraint xsi:type="foreign" referenceId="PRODUCT_PRODUCT_ID_VENDOR_VENDOR_ID"
+                    table="training_vendor_product" column="product_id" 
+                    referenceTable="catalog_product_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
+    </table>
 </schema>
