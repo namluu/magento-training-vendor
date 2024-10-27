@@ -1,3 +1,12 @@
-<?= __('No vendor found.') ?><br>
-<?= __('For product: ' . $this->getProduct()->getName()) ?>
+<?php $collection = $this->getCollection(); ?>
+<?php if ($collection->count()): ?>
+    <p><?= __('Vendor found for product:') ?></p>
+    <ul>
+        <?php foreach ($collection as $vendor): ?>
+            <li><?php echo $vendor->getName() ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <p><?= __('No vendor found for product: ' . $this->getProduct()->getName()) ?></p>
+<?php endif; ?>
 

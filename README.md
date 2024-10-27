@@ -1,3 +1,6 @@
-- Register new Magento module: Training_Vendor
+- Register new Magento module: Training_Vendor.
 - Create a new entity for “vendor”.
-  - Create a new table (training_vendor, with two fields for vendor_id, name)
+  - Create a table (training_vendor, with two fields for vendor_id, name).
+  - Create a table (training_vendor_product) to connect vendors with products.
+- Create Vendor model classes.
+- On the product view page, show a block with a list of assigned vendors.
