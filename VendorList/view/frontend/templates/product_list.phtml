@@ -1,0 +1,11 @@
+<?php $vendor = $this->getVendor(); ?>
+<?php $products = $this->getLoadedProductCollection(); ?>
+<?php if ($products && count($products)): ?>
+    <ul>
+        <?php foreach ($products as $product): ?>
+            <li><a href="<?= $product->getProductUrl() ?>"><?php echo $product->getName() ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <div class="message info empty"><span><?= __('There are no product.') ?></span></div>
+<?php endif; ?>

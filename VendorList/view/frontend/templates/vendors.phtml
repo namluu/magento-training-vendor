@@ -1,0 +1,11 @@
+<?php $vendors = $this->getVendors(); ?>
+<?php if ($vendors && count($vendors)): ?>
+<ul>
+    <?php foreach ($vendors as $vendor): ?>
+    <li><a href="<?= $this->getViewUrl($vendor) ?>"><?php echo $vendor->getName() ?></a></li>
+    <?php endforeach; ?>
+</ul>
+<p><a href="<?= $this->getSortUrl() ?>"><?= __('Sorting') ?></a></p>
+<?php else: ?>
+    <div class="message info empty"><span><?= __('There are no vendors.') ?></span></div>
+<?php endif; ?>

@@ -1,0 +1,7 @@
+- Register new Magento module: Training_VendorList.
+- Create route
+  - Url to view vendor list http://<baseurl>/vendor/vendor/index
+- Create Controller
+  - Pass data from Controller to Block
+- Create layout and template
+- List products by vendor
